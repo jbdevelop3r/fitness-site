@@ -1,23 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
+import ReactPlayer from "react-player";
+import "./styles/App.scss"
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="main-container">
+      <section className="first-page">
+        <div className="first-page-tagline">
+          <p>Virtual one on one training</p>
+          <p>Decide. Commit. Succeed. We will help you.</p>
+        </div>
+        <div>
+          <div>
+            <div className="gym-video">
+              <ReactPlayer 
+              width="400px" 
+              height="240px" 
+              controls 
+              url="https://www.youtube.com/watch?v=HQfF5XRVXjU&ab_channel=DavidHo" />
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
   );
 }
