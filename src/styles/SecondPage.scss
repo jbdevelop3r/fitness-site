@@ -1,8 +1,12 @@
 .second-page {
-    background: #a39c9c33;
+    // background: #f1e8e833;
+    background-image: url(../../public/assets/second-page-cover.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .exercise-tagline {
+    padding-top: 2rem;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -25,7 +29,9 @@
     "strength"
     "flexibility"
     "home-gym";
-    margin-block: 2rem;
+    // margin-block: 2rem;
+    padding-top: 2rem;
+    padding-bottom: 5rem;
     gap: 1rem;
     max-width: 40rem;
     place-items: center;
@@ -52,9 +58,10 @@
         }
     }
     & div:hover {
-        transform: scale(1.02);
+        transform: translate(10px, -10px);
         transition: 0.3s ease;
         cursor: pointer;
+        outline: 3px solid white;
     }
     opacity: 0;
     transform: translateX(-500px);

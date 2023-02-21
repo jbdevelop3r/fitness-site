@@ -13,16 +13,17 @@ function App() {
     <div className="main-container">
       <section className="first-page">
           <div className="first-page-tagline">
-            <p>Virtual one on one training</p>
+            <p>One on one training</p>
             <p>Decide. Commit. Succeed. We will help you.</p>
           </div>
           <div className="gym-video" >
             <ReactPlayer
             width="100%"
             height="100%"
-            controls={true}
-            loop={true}
-            playing={true}
+            playing={true} 
+            controls
+            muted
+            loop={true} 
             url={video} />
           </div>
       </section>
@@ -50,8 +51,15 @@ function App() {
             </div>
           </div>
       </section>
+      <section className="third-page">
+        <p>Try it for free</p>
+        <p> We'll give you 2 weeks free training from one of our fitness trainer</p>
+        <button>Sign up now</button>
+      </section>
       <footer>
-        <p>This is my footer ---</p>
+        <p> About Us </p>
+        <p> Terms and Conditions</p>
+        <p> Our Goal</p>
       </footer>
     </div>
   );

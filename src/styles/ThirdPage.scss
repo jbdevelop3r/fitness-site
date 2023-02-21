@@ -1,0 +1,31 @@
+.third-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 80vh;
+    background-image: url('../../public/assets/coach.webp');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover; 
+    & p {
+        color: white;
+        text-align: center;
+    }
+    & p:nth-child(1) {
+        font-size: 3rem;
+    }
+    & p:nth-child(2) {
+        font-size: 1.5rem;
+    }
+    & button {
+        all: unset;
+        cursor: pointer;
+        margin-top: 4rem;
+        background: #F0EEED;
+        padding: 0.8rem 1.5rem;
+    }
+    & button:hover {
+        transform: scale(1.03);
+    }
+}

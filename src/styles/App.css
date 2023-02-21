@@ -85,7 +85,7 @@
   margin-inline: auto;
   display: grid;
   grid-template-areas: "cardio" "strength" "flexibility" "home-gym";
-  margin-block: 2rem;
+  padding-block: 2rem;
   gap: 1rem;
   max-width: 40rem;
   place-items: center;
@@ -126,6 +126,10 @@
   transform: translateY(0);
 }
 
+.show-color {
+  border: 5px solid red;
+}
+
 .cardio {
   background-image: url("../../public/assets/cardio.webp");
 }
@@ -164,4 +168,4 @@ body {
 }
 body::-webkit-scrollbar {
   display: none;
-}/*# sourceMappingURL=app.css.map */
+}/*# sourceMappingURL=App.css.map */
