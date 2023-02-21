@@ -4,7 +4,10 @@
     box-sizing: border-box;
 }
 
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap");
 @import "./FrontPage.scss";
+@import "./SecondPage.scss";
+@import "./Footer.css";
 
 html {
     height: 100%;
@@ -13,4 +16,8 @@ html {
 body {
     height: 100%;
     width: 100wv;
+    &::-webkit-scrollbar {
+        display: none;
+      }
+    font-family: 'Roboto', sans-serif;
 }

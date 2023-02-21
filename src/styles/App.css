@@ -1,18 +1,158 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap");
+@import "./Footer.css";
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
 }
 
-.main-image {
+.main-container {
+  width: 100vw;
   height: 100vh;
+}
+
+.first-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100%;
   background-image: url("../../public/assets/ropes.webp");
   background-position: center;
   background-repeat: no-repeat;
-  background-size: contain;
-  width: 100vw;
+  background-size: cover;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+  gap: 1rem;
 }
 
+.first-page-tagline {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+.first-page-tagline p:nth-child(1) {
+  font-size: 2.5em;
+}
+
+.gym-video {
+  height: 200px;
+  width: 280px;
+}
+
+@media (min-width: 1050px) {
+  .first-page {
+    flex-direction: row;
+    gap: 5rem;
+  }
+  .first-page-tagline {
+    text-align: left;
+  }
+  .gym-video {
+    height: 300px;
+    width: 400px;
+  }
+}
+@media (min-width: 600px) {
+  .gym-video {
+    transform: scale(1.2);
+    margin-top: 2rem;
+  }
+}
+.second-page {
+  background: rgba(163, 156, 156, 0.2);
+}
+
+.exercise-tagline {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.exercise-tagline p {
+  font-size: 2.5rem;
+  text-align: center;
+  font-weight: 550;
+  padding-inline: 1rem;
+  padding-block: 2rem;
+  color: rgb(50, 46, 46);
+}
+
+.four-exercises {
+  margin-inline: auto;
+  display: grid;
+  grid-template-areas: "cardio" "strength" "flexibility" "home-gym";
+  margin-block: 2rem;
+  gap: 1rem;
+  max-width: 40rem;
+  place-items: center;
+  opacity: 0;
+  transform: translateX(-500px);
+  transition: 2s ease-in-out;
+}
+.four-exercises div {
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  align-items: center;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 250px;
+  height: 400px;
+}
+.four-exercises div p {
+  color: white;
+}
+.four-exercises div p:nth-child(1) {
+  font-size: 2.5rem;
+}
+.four-exercises div p:nth-child(2) {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+.four-exercises div:hover {
+  transform: scale(1.02);
+  transition: 0.3s ease;
+  cursor: pointer;
+}
+
+.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.cardio {
+  background-image: url("../../public/assets/cardio.webp");
+}
+
+.strength {
+  background-image: url("../../public/assets/strength.webp");
+}
+
+.flexibility {
+  background-image: url("../../public/assets/flexible.webp");
+}
+
+.home-gym {
+  background-image: url("../../public/assets/homegym.jpeg");
+}
+
+@media (min-width: 600px) {
+  .four-exercises {
+    grid-template-areas: "strength flexibility" "cardio home-gym";
+  }
+}
+@media (min-width: 1200px) {
+  .four-exercises {
+    grid-template-areas: "strength flexibility cardio home-gym";
+    max-width: 90%;
+  }
+}
 html {
   height: 100%;
 }
@@ -20,4 +160,8 @@ html {
 body {
   height: 100%;
   width: 100wv;
+  font-family: "Roboto", sans-serif;
+}
+body::-webkit-scrollbar {
+  display: none;
 }/*# sourceMappingURL=app.css.map */

@@ -7,8 +7,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: row;
-  gap: 1rem;
+  flex-direction: column;
   height: 100%;
   background-image: url("../../public/assets/ropes.webp");
   background-position: center;
@@ -19,8 +18,40 @@
      object-fit: cover;
   -o-object-position: center;
      object-position: center;
+  gap: 1rem;
 }
 
 .first-page-tagline {
   color: white;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+.first-page-tagline p:nth-child(1) {
+  font-size: 2.5em;
+}
+
+.gym-video {
+  height: 200px;
+  width: 280px;
+}
+
+@media (min-width: 1050px) {
+  .first-page {
+    flex-direction: row;
+    gap: 5rem;
+  }
+  .first-page-tagline {
+    text-align: left;
+  }
+  .gym-video {
+    height: 300px;
+    width: 400px;
+  }
+}
+@media (min-width: 600px) {
+  .gym-video {
+    transform: scale(1.2);
+    margin-top: 2rem;
+  }
 }/*# sourceMappingURL=FrontPage.css.map */

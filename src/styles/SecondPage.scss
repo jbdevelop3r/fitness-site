@@ -1,0 +1,103 @@
+.second-page {
+    background: #a39c9c33;
+}
+
+.exercise-tagline {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    & p {
+        font-size: 2.5rem;
+        text-align: center;
+        font-weight: 550;
+        padding-inline: 1rem;
+        padding-block: 2rem;
+        color: rgb(50, 46, 46);
+    }
+    // margin-block: 4rem;
+}
+
+.four-exercises {
+    margin-inline: auto;
+    display: grid;
+    grid-template-areas: 
+    "cardio"
+    "strength"
+    "flexibility"
+    "home-gym";
+    margin-block: 2rem;
+    gap: 1rem;
+    max-width: 40rem;
+    place-items: center;
+    & div {
+        border-radius: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: end;
+        align-items: center;
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        width: 250px;
+        height: 400px;
+        & p {
+            color: white;
+        }
+        & p:nth-child(1) {
+            font-size: 2.5rem;
+        }
+        & p:nth-child(2) {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+        }
+    }
+    & div:hover {
+        transform: scale(1.02);
+        transition: 0.3s ease;
+        cursor: pointer;
+    }
+    opacity: 0;
+    transform: translateX(-500px);
+    transition: 2s ease-in-out;
+}
+
+.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.show-color {
+    border: 5px solid red;
+}
+
+.cardio {
+    background-image: url('../../public/assets/cardio.webp');
+}
+
+.strength {
+    background-image: url('../../public/assets/strength.webp');
+}
+
+.flexibility {
+    background-image: url('../../public/assets/flexible.webp');
+}
+
+.home-gym {
+    background-image: url('../../public/assets/homegym.jpeg');
+}
+
+@media (min-width: 600px) {
+    .four-exercises {
+        grid-template-areas: 
+        "strength flexibility"
+        "cardio home-gym";
+    }
+}
+
+@media (min-width: 1200px) {
+    .four-exercises {
+        grid-template-areas: 
+        "strength flexibility cardio home-gym";
+        max-width: 90%;
+    }
+}

@@ -1,0 +1,9 @@
+footer {
+    max-width: 100%;
+    background: #333;
+    & p {
+        color: white;
+        padding: 10px 15px;
+        text-align: center;
+    }
+}
