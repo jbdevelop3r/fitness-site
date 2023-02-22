@@ -26,15 +26,12 @@
   padding-block: 2rem;
   color: #333;
 }
-.plans-tagline p code {
-  color: white;
-}
 
 .plans-container {
   display: grid;
   grid-template-areas: "basic" "advanced" "pro";
   gap: 3rem;
-  padding-bottom: 3rem;
+  padding-bottom: 2rem;
 }
 
 .basic, .advanced, .pro {
@@ -94,6 +91,9 @@
 }
 
 @media (min-width: 600px) {
+  .fourth-page {
+    flex-direction: column;
+  }
   .plans-container {
     grid-template-areas: "basic advance" "pro pro";
   }
@@ -101,8 +101,17 @@
     margin-left: 60%;
   }
 }
-@media (min-width: 900px) {
+@media (min-width: 1110px) {
+  .fourth-page {
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+  .plans-tagline {
+    margin-left: 2rem;
+  }
   .plans-container {
+    padding-inline: 3rem;
     grid-template-areas: "basic advance pro";
   }
   .plans-container .pro {

@@ -61,7 +61,7 @@ function App() {
 
       <section className="fourth-page">
         <div className="plans-tagline">
-          <p>Plans for <code>all</code> level</p>
+          <p>Plans for all level</p>
         </div>
         <div className="plans-container">
           <div className="basic">
