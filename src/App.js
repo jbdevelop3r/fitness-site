@@ -4,9 +4,9 @@ import video from './video/video-gym.mp4'
 import { useInView } from "react-hook-inview";
 
 function App() {
-  const [ref, isVisible] = useInView({
+  const [offersRef, offersRefIsVisible] = useInView({
     threshold: .3,
-    unobserveOnEnter: false
+    unobserveOnEnter: true
   }) 
 
   return (
@@ -29,11 +29,11 @@ function App() {
       </section>
       <section className="second-page">
         <div className="exercise-tagline">
-          <p> What makes our offers stands out from the rest? </p>
+          <p> What makes our offers <code>stands</code> out from the rest? </p>
         </div>
 
-          <div  className={`four-exercises ${isVisible ? "show" : ""} `} ref={ref}>
-            <div className={`strength ${isVisible ? "show" : ""}`} ref={ref}>
+          <div  className={`four-exercises ${offersRefIsVisible ? "show" : ""} `} ref={offersRef}>
+            <div className="strength">
               <p>strength</p>
               <p>power up your strength</p>
             </div>
@@ -51,11 +51,40 @@ function App() {
             </div>
           </div>
       </section>
+
+
       <section className="third-page">
         <p>Try it for free</p>
         <p> We'll give you 2 weeks free training from one of our fitness trainer</p>
         <button>Sign up now</button>
       </section>
+
+      <section className="fourth-page">
+        <div className="plans-tagline">
+          <p>Plans for <code>all</code> level</p>
+        </div>
+        <div className="plans-container">
+          <div className="basic">
+            <div></div>
+            <p>basic</p>
+            <p>$5/month</p>
+            <button>sign up</button>
+          </div>
+          <div className="advanced">
+            <div></div>
+            <p>advanced</p>
+            <p>$10/month</p>
+            <button>sign up</button>
+          </div>
+          <div className="pro">
+            <div></div>
+            <p>pro</p>
+            <p>$25/month</p>
+            <button>sign up</button>
+          </div>
+        </div>
+      </section>
+
       <footer>
         <p> About Us </p>
         <p> Terms and Conditions</p>

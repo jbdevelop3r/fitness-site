@@ -1,0 +1,117 @@
+.fourth-page {
+    background-image: url('../../public/assets/plans.webp');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    object-fit: center;
+    object-position: center;
+}
+
+.plans-tagline {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    & p {
+        font-size: 3rem;
+        text-align: center;
+        font-weight: 550;
+        padding-inline: 1rem;
+        padding-block: 2rem;
+        color: #333; 
+        & code {
+            color: white;
+        }
+    }
+}
+
+.plans-container {
+    display: grid;
+    grid-template-areas: 
+    "basic"
+    "advanced"
+    "pro";
+    gap: 3rem;
+    padding-bottom: 3rem;
+}
+
+.basic, .advanced, .pro {
+    margin-top: 2rem;
+    background: rgba(255, 255, 255, .85);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(0px);
+    -webkit-backdrop-filter: blur(0px);
+    border: 1px solid rgba(255, 255, 255, 0.46);    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 300px;
+    width: 250px; 
+    &:hover {
+        background: #ffffff;
+        cursor: pointer;
+    }
+    & div {
+        height: 40px;
+        width: 40px;
+        border-radius: 50%;
+        margin-bottom: 2rem;
+    }
+    & p:nth-child(2) {
+        font-size: 2.5rem;
+        color: #333;
+    }
+    & button {
+        all: unset;
+        cursor: pointer;
+        margin-top: 2rem;
+        background: #333;
+        padding: 0.5rem 1.5rem;
+        color: white;
+        border-radius: 5px;
+    }
+    & button:hover {
+        transform: scale(1.03);
+        color: white;
+        background: #333;
+    }
+}
+
+.basic div {
+    background: #30E3DF;
+}
+
+.advanced div {
+    background: #FCE22A;
+}
+
+.pro div {
+    background: #F94A29;
+}
+
+
+@media (min-width: 600px) {
+    .plans-container {
+        grid-template-areas: 
+        "basic advance"
+        "pro pro";
+        & .pro {
+            margin-left: 60%;
+        }
+    }
+}
+
+@media (min-width: 900px) {
+    .plans-container {
+        grid-template-areas: 
+        "basic advance pro";
+        & .pro {
+            margin-left: 0;
+        }
+    }
+}

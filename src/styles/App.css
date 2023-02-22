@@ -42,6 +42,7 @@
 .gym-video {
   height: 200px;
   width: 280px;
+  cursor: pointer;
 }
 
 @media (min-width: 1050px) {
@@ -64,10 +65,13 @@
   }
 }
 .second-page {
-  background: rgba(163, 156, 156, 0.2);
+  background-image: url(../../public/assets/second-page-cover.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .exercise-tagline {
+  padding-top: 2rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -80,12 +84,17 @@
   padding-block: 2rem;
   color: rgb(50, 46, 46);
 }
+.exercise-tagline p code {
+  color: white;
+  font-size: 3rem;
+}
 
 .four-exercises {
   margin-inline: auto;
   display: grid;
   grid-template-areas: "cardio" "strength" "flexibility" "home-gym";
-  padding-block: 2rem;
+  padding-top: 2rem;
+  padding-bottom: 5rem;
   gap: 1rem;
   max-width: 40rem;
   place-items: center;
@@ -116,9 +125,10 @@
   margin-bottom: 2rem;
 }
 .four-exercises div:hover {
-  transform: scale(1.02);
+  transform: translate(10px, -10px);
   transition: 0.3s ease;
   cursor: pointer;
+  outline: 3px solid white;
 }
 
 .show {
@@ -157,6 +167,141 @@
     max-width: 90%;
   }
 }
+.third-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 80vh;
+  background-image: url("../../public/assets/coach.webp");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.third-page p {
+  color: white;
+  text-align: center;
+}
+.third-page p:nth-child(1) {
+  font-size: 3rem;
+}
+.third-page p:nth-child(2) {
+  font-size: 1.5rem;
+}
+.third-page button {
+  all: unset;
+  cursor: pointer;
+  margin-top: 4rem;
+  background: #F0EEED;
+  padding: 0.8rem 1.5rem;
+}
+.third-page button:hover {
+  transform: scale(1.03);
+  color: #F0EEED;
+  background: #333;
+}
+
+.fourth-page {
+  height: 100vh;
+  background-image: url("../../public/assets/plans.webp");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  -o-object-fit: center;
+     object-fit: center;
+  -o-object-position: center;
+     object-position: center;
+}
+
+.plans-tagline {
+  padding-top: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.plans-tagline p {
+  font-size: 3rem;
+  text-align: center;
+  font-weight: 550;
+  padding-inline: 1rem;
+  padding-block: 2rem;
+  color: #333;
+}
+.plans-tagline p code {
+  color: white;
+}
+
+.plans-container {
+  display: grid;
+  grid-template-areas: "basic" "advanced" "pro";
+  gap: 3rem;
+}
+
+.basic, .advanced, .pro {
+  margin-top: 5rem;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(0px);
+  -webkit-backdrop-filter: blur(0px);
+  border: 1px solid rgba(255, 255, 255, 0.46);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 300px;
+  width: 250px;
+}
+.basic div, .advanced div, .pro div {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  margin-bottom: 2rem;
+}
+.basic p:nth-child(2), .advanced p:nth-child(2), .pro p:nth-child(2) {
+  font-size: 2.5rem;
+  color: #333;
+}
+.basic button, .advanced button, .pro button {
+  all: unset;
+  cursor: pointer;
+  margin-top: 2rem;
+  background: #333;
+  padding: 0.5rem 1.5rem;
+  color: white;
+  border-radius: 5px;
+}
+.basic button:hover, .advanced button:hover, .pro button:hover {
+  transform: scale(1.03);
+  color: white;
+  background: #333;
+}
+
+.basic div {
+  background: #30E3DF;
+}
+
+.advanced div {
+  background: #FCE22A;
+}
+
+.pro div {
+  background: #F94A29;
+}
+
+@media (min-width: 600px) {
+  .plans-container {
+    grid-template-areas: "basic advance" "pro pro";
+  }
+}
+@media (min-width: 900px) {
+  .plans-container {
+    grid-template-areas: "basic advance pro";
+  }
+}
 html {
   height: 100%;
 }
@@ -168,4 +313,4 @@ body {
 }
 body::-webkit-scrollbar {
   display: none;
-}/*# sourceMappingURL=App.css.map */
+}/*# sourceMappingURL=app.css.map */

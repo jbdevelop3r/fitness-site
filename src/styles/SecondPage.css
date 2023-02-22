@@ -18,6 +18,11 @@
   padding-block: 2rem;
   color: rgb(50, 46, 46);
 }
+.exercise-tagline p code {
+  color: white;
+  font-size: 3rem;
+  animation: blinker 1s linear infinite;
+}
 
 .four-exercises {
   margin-inline: auto;
@@ -95,5 +100,10 @@
   .four-exercises {
     grid-template-areas: "strength flexibility cardio home-gym";
     max-width: 90%;
+  }
+}
+@keyframes blinker {
+  50% {
+    opacity: 0;
   }
 }/*# sourceMappingURL=SecondPage.css.map */

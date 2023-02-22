@@ -8,6 +8,7 @@
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover; 
+    height: 100vh;
     & p {
         color: white;
         text-align: center;
@@ -27,5 +28,7 @@
     }
     & button:hover {
         transform: scale(1.03);
+        color: #F0EEED;
+        background: #333;
     }
 }
