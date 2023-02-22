@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap");
 @import "./Footer.css";
 * {
   padding: 0;
@@ -34,6 +35,9 @@
   display: flex;
   flex-direction: column;
   text-align: center;
+  opacity: 0;
+  transform: translate(-100px, -100px);
+  transition: 2s ease-in-out;
 }
 .first-page-tagline p:nth-child(1) {
   font-size: 2.5em;
@@ -43,6 +47,13 @@
   height: 200px;
   width: 280px;
   cursor: pointer;
+  opacity: 0;
+  transition: 2s ease-in-out;
+}
+
+.show {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 @media (min-width: 1050px) {
@@ -75,6 +86,9 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  opacity: 0;
+  transform: translateY(100px);
+  transition: 2s ease-in-out;
 }
 .exercise-tagline p {
   font-size: 2.5rem;
@@ -87,6 +101,7 @@
 .exercise-tagline p code {
   color: white;
   font-size: 3rem;
+  animation: blinker 1s linear infinite;
 }
 
 .four-exercises {
@@ -98,9 +113,6 @@
   gap: 1rem;
   max-width: 40rem;
   place-items: center;
-  opacity: 0;
-  transform: translateX(-500px);
-  transition: 2s ease-in-out;
 }
 .four-exercises div {
   border-radius: 20px;
@@ -125,35 +137,43 @@
   margin-bottom: 2rem;
 }
 .four-exercises div:hover {
-  transform: translate(10px, -10px);
+  transform: translate(3px, -3px);
   transition: 0.3s ease;
   cursor: pointer;
   outline: 3px solid white;
 }
 
-.show {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-.show-color {
-  border: 5px solid red;
-}
-
-.cardio {
-  background-image: url("../../public/assets/cardio.webp");
-}
-
 .strength {
   background-image: url("../../public/assets/strength.webp");
+  opacity: 0;
+  transform: translateX(-50px);
+  transition: 1s ease-in-out;
 }
 
 .flexibility {
   background-image: url("../../public/assets/flexible.webp");
+  opacity: 0;
+  transform: translateX(-50px);
+  transition: 1s ease-in-out;
+}
+
+.cardio {
+  background-image: url("../../public/assets/cardio.webp");
+  opacity: 0;
+  transform: translateX(-50px);
+  transition: 1s ease-in-out;
 }
 
 .home-gym {
   background-image: url("../../public/assets/homegym.jpeg");
+  opacity: 0;
+  transform: translateX(-50px);
+  transition: 1s ease-in-out;
+}
+
+.show {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 @media (min-width: 600px) {
@@ -167,6 +187,11 @@
     max-width: 90%;
   }
 }
+@keyframes blinker {
+  50% {
+    opacity: 0;
+  }
+}
 .third-page {
   display: flex;
   justify-content: center;
@@ -177,6 +202,7 @@
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+  height: 100vh;
 }
 .third-page p {
   color: white;
@@ -188,21 +214,35 @@
 .third-page p:nth-child(2) {
   font-size: 1.5rem;
 }
-.third-page button {
-  all: unset;
-  cursor: pointer;
-  margin-top: 4rem;
-  background: #F0EEED;
-  padding: 0.8rem 1.5rem;
-}
 .third-page button:hover {
   transform: scale(1.03);
   color: #F0EEED;
   background: #333;
 }
 
+.signup-btn {
+  all: unset;
+  cursor: pointer;
+  margin-top: 4rem;
+  background: #F0EEED;
+  padding: 0.8rem 1.5rem;
+  opacity: 0;
+  transform: scale(0.1);
+}
+.signup-btn button:hover {
+  transform: scale(1.03);
+  color: #F0EEED;
+  background: #333;
+  transition: 0.1s ease;
+}
+
+.show {
+  transform: scale(1);
+  opacity: 1;
+  transition: 1s ease-in-out;
+}
+
 .fourth-page {
-  height: 100vh;
   background-image: url("../../public/assets/plans.webp");
   background-position: center;
   background-repeat: no-repeat;
@@ -217,7 +257,7 @@
 }
 
 .plans-tagline {
-  padding-top: 2rem;
+  margin-top: 2rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -230,19 +270,17 @@
   padding-block: 2rem;
   color: #333;
 }
-.plans-tagline p code {
-  color: white;
-}
 
 .plans-container {
   display: grid;
   grid-template-areas: "basic" "advanced" "pro";
   gap: 3rem;
+  padding-bottom: 2rem;
 }
 
 .basic, .advanced, .pro {
-  margin-top: 5rem;
-  background: rgba(255, 255, 255, 0.9);
+  margin-top: 2rem;
+  background: rgba(255, 255, 255, 0.85);
   border-radius: 16px;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(0px);
@@ -254,6 +292,13 @@
   justify-content: center;
   height: 300px;
   width: 250px;
+  opacity: 0;
+  transform: translateX(50px);
+  transition: 1s ease-in-out;
+}
+.basic:hover, .advanced:hover, .pro:hover {
+  background: #ffffff;
+  cursor: pointer;
 }
 .basic div, .advanced div, .pro div {
   height: 40px;
@@ -293,13 +338,36 @@
 }
 
 @media (min-width: 600px) {
+  .fourth-page {
+    flex-direction: column;
+  }
   .plans-container {
     grid-template-areas: "basic advance" "pro pro";
   }
+  .plans-container .pro {
+    margin-left: 60%;
+  }
 }
-@media (min-width: 900px) {
+.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (min-width: 1110px) {
+  .fourth-page {
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+  .plans-tagline {
+    margin-left: 2rem;
+  }
   .plans-container {
+    padding-inline: 3rem;
     grid-template-areas: "basic advance pro";
+  }
+  .plans-container .pro {
+    margin-left: 0;
   }
 }
 html {
@@ -313,4 +381,4 @@ body {
 }
 body::-webkit-scrollbar {
   display: none;
-}/*# sourceMappingURL=app.css.map */
+}/*# sourceMappingURL=App.css.map */

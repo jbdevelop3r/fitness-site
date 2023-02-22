@@ -24,6 +24,7 @@
   font-weight: 550;
   padding-inline: 1rem;
   padding-block: 2rem;
+  font-family: "Poppins", sans-serif;
   color: #333;
 }
 
@@ -48,6 +49,9 @@
   justify-content: center;
   height: 300px;
   width: 250px;
+  opacity: 0;
+  transform: translateX(50px);
+  transition: 1s ease-in-out;
 }
 .basic:hover, .advanced:hover, .pro:hover {
   background: #ffffff;
@@ -101,6 +105,11 @@
     margin-left: 60%;
   }
 }
+.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 @media (min-width: 1110px) {
   .fourth-page {
     flex-direction: row;

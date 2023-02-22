@@ -22,6 +22,9 @@
             animation: blinker 1s linear infinite;
         }
     }
+    opacity: 0;
+    transform: translateY(100px);
+    transition: 2s ease-in-out;
 }
 
 .four-exercises {
@@ -60,39 +63,44 @@
         }
     }
     & div:hover {
-        transform: translate(10px, -10px);
+        transform: translate(3px, -3px);
         transition: 0.3s ease;
         cursor: pointer;
         outline: 3px solid white;
     }
+}
+
+.strength {
+    background-image: url('../../public/assets/strength.webp');
     opacity: 0;
-    transform: translateX(-500px);
-    transition: 2s ease-in-out;
+    transform: translateX(-50px);
+    transition: 1s ease-in-out;
+}
+
+.flexibility {
+    background-image: url('../../public/assets/flexible.webp');
+    opacity: 0;
+    transform: translateX(-50px);
+    transition: 1s ease-in-out;
+}
+
+.cardio {
+    background-image: url('../../public/assets/cardio.webp');
+    opacity: 0;
+    transform: translateX(-50px);
+    transition: 1s ease-in-out;
+}
+
+.home-gym {
+    background-image: url('../../public/assets/homegym.jpeg');
+    opacity: 0;
+    transform: translateX(-50px);
+    transition: 1s ease-in-out;
 }
 
 .show {
     opacity: 1;
     transform: translateY(0);
-}
-
-.show-color {
-    border: 5px solid red;
-}
-
-.cardio {
-    background-image: url('../../public/assets/cardio.webp');
-}
-
-.strength {
-    background-image: url('../../public/assets/strength.webp');
-}
-
-.flexibility {
-    background-image: url('../../public/assets/flexible.webp');
-}
-
-.home-gym {
-    background-image: url('../../public/assets/homegym.jpeg');
 }
 
 @media (min-width: 600px) {

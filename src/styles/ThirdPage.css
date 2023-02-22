@@ -20,15 +20,30 @@
 .third-page p:nth-child(2) {
   font-size: 1.5rem;
 }
-.third-page button {
+.third-page button:hover {
+  transform: scale(1.03);
+  color: #F0EEED;
+  background: #333;
+}
+
+.signup-btn {
   all: unset;
   cursor: pointer;
   margin-top: 4rem;
   background: #F0EEED;
   padding: 0.8rem 1.5rem;
+  opacity: 0;
+  transform: scale(0.1);
 }
-.third-page button:hover {
+.signup-btn button:hover {
   transform: scale(1.03);
   color: #F0EEED;
   background: #333;
+  transition: 0.1s ease;
+}
+
+.show {
+  transform: scale(1);
+  opacity: 1;
+  transition: 1s ease-in-out;
 }/*# sourceMappingURL=ThirdPage.css.map */
